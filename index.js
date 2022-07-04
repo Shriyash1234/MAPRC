@@ -365,27 +365,12 @@ app.get("/", function(req, res){
       res.redirect("/")
     }else{
       const customListName = "Something";
-      res.render("list2",{Items: foundItems,listName:customListName});
+      res.render("Students_ID",{Items: foundItems,listName:customListName});
     }
   })
 });
-  // app.get("/:customListName",function(req,res){
-  //   const customListName =  req.params.customListName;
-  //   Item.find({},function(err,foundItems){
-  //     if(foundItems.length === 9){
-  //       Item.insertMany(defaultItems,function(err){
-  //         if(err){
-  //           console.log(err)
-  //         }else{
-  //           console.log("Success")
-  //         }
-  //      });
-  //     }else{
-  //       res.render("list",{Items: foundItems,listName:customListName});
-  //     }
-  //   })
-  // }
-  app.get("/:customListName",function(req,res){
+  
+  app.get("/student/:customListName",function(req,res){
     const student_name = req.params.newName;
     const customListName = req.params.customListName;
     Item.find({},function(err,foundItems){
@@ -414,27 +399,197 @@ app.get("/", function(req, res){
     }
     // console.log(arrayMax(arr));
     mail = mail_list[arr.indexOf(arrayMax(arr))]
-    res.redirect("/" +mail)
+    res.redirect("/student/" +mail)
   })
+  
 
-
-// app.get("/:customListName",function(req,res){
-//   const customListName =  req.params.customListName;
-//   List.findOne({name:customListName},function(err,foundList){
-//     if(!err){
-//       if(!foundList){
-//         res.render("List",{Items:foundItems,listName:customListName})
-//       }else{
-
-//       }
-//     }
-//   })
-// })
-
-  // });
-
-
-
-app.listen(3700,function(){
-  console.log("Server has started on the port 3700 succesfully.")
+  app.get("/professor",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("professor_ID",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/prachi",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("prachi",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/manasi",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("manasi",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/cn_pandey",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("cn_pandey",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/Soumyabrata",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("Soumyabrata",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/jooyoung",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("jooyoung",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/rraghvan",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("rraghvan",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/saumils",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("saumils",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/spm",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("spm",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/satyajit",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("satyajit",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/professor/mayank",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("mayank",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+app.listen(3800,function(){
+  console.log("Server has started on the port 3800 succesfully.")
 })
