@@ -166,37 +166,37 @@
 	<main class="d-flex flex-nowrap side">
 	  <div class="d-flex flex-column flex-shrink-0 p-3 text-white dark" style="width: 280px;">
 	    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-	    <a href="https://shriyash1234.github.io/website5/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+	    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
 	      <span class="fs-4">Yearbook'22</span>
 	    </a>
 	    <hr>
 	    <ul class="nav nav-pills flex-column mb-auto">
 	      <li class="nav-item">
-	        <a href="#" class="nav-link active" aria-current="page">
+	        <a href="/student" class="nav-link active" aria-current="page">
 	          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
 	          Yearbook of class 2022
 	        </a>
 	      </li>
 	      <li>
-	        <a href="#" class="nav-link text-white" >
+	        <a href="/professor" class="nav-link text-white" >
 	          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
 	          Messages from professors
 	        </a>
 	      </li>
 	      <li>
-	        <a href="#" class="nav-link text-white" >
+	        <a href="/messages_from_juinors" class="nav-link text-white" >
 	          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
 	          Messages from juinors
 	        </a>
 	      </li>
 	      <li>
-	        <a href="#" class="nav-link text-white">
+	        <a href="/memorylane" class="nav-link text-white">
 	          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
 	          Memorylane
 	        </a>
 	      </li>
 	      <li>
-	        <a href="#" class="nav-link text-white">
+	        <a href="/meet_the_team" class="nav-link text-white">
 	          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
 	          Meet the team
 	        </a>
@@ -252,7 +252,7 @@
 								        <%for(var l =0;l<Items.length;l++){  %>
 								    		<% var Real_femail = Items[l].Your_Email_ID %>
 											<%if(Friend_name === Real_femail){ %>
-												<em>-<%=Items[l].Name%></em></li>
+												<a href=<%=Items[j].Email%>><em>-<%=Items[l].Name%></em></li></a>
 									  		<%}%>
 								 		<%}%>
 								    <%}%>

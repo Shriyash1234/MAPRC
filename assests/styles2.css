@@ -8,7 +8,7 @@ body {
   scrollbar-width: none;
 }
 .container::-webkit-scrollbar { 
-  display: none;  
+  display: 50px;  
 }
 .container-fluid{
   background-color: #1B1717;
@@ -288,6 +288,10 @@ img{
   padding-top: 20px;
 }rofile
 
+
+h1{
+  color: white !important;
+}
 /* styling for cards */
 
 .bd-placeholder-img {
@@ -349,7 +353,13 @@ margin-top: 2em;
 overflow-y: scroll;
 height: 100vh;
 }
-  
+
+.profilecards2 {
+  padding: 0px;
+  margin-top: -70px;
+  overflow-y: scroll;
+  height: 100vh;
+  }
 :root{
 --background-dark: #2d3548;
 --text-light: rgba(255,255,255,0.6);
@@ -388,7 +398,7 @@ justify-content: center;
 padding: var(--spacing-xxl) var(--spacing-l);
 }
 
-.card-grid{
+.card-grid,.card-grid2{
 display: grid;
 grid-template-columns: repeat(1, 1fr);
 grid-column-gap: var(--spacing-l);
@@ -408,6 +418,18 @@ grid-template-columns: repeat(2, 1fr);
 grid-template-columns: repeat(4, 1fr); 
 }
 }
+
+@media(min-width: 540px){
+  .card-grid2{
+  grid-template-columns: repeat(1, 1fr); 
+  }
+  }
+  
+  @media(min-width: 960px){
+  .card-grid2{
+  grid-template-columns: repeat(2, 1fr); 
+  }
+  }
 
 .card{
 list-style: none;
@@ -474,7 +496,7 @@ line-height: 1.4;
 /* Styling for MAPRC */
 #gold_trans_2 {
   position: relative;
-  bottom:-70px;
+  bottom:-60px;
   left:0px;
   margin-left: 50px;;
 	width: 120px;
@@ -524,4 +546,67 @@ line-height: 1.4;
 	left: 165px; 
 	width: 20px;
 	height: 20px;
+}
+
+/* code for memorylane */
+#gallery {
+  margin-top: 5em;
+  margin-right: 0;
+  line-height:0;
+  -webkit-column-count:5; /* split it into 5 columns */
+  -webkit-column-gap:5px; /* give it a 5px gap between columns */
+  -moz-column-count:5;
+  -moz-column-gap:5px;
+  column-count:5;
+  column-gap:5px;
+  overflow: auto;
+}
+#gallery img {
+
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom:5px; /* to match column gap */
+}
+@media (max-width: 1200px) {
+  #gallery {
+   -moz-column-count:    4;
+   -webkit-column-count: 4;
+   column-count:         4;
+  }
+}
+
+@media (max-width: 1000px) {
+  #gallery {
+   -moz-column-count:    3;
+   -webkit-column-count: 3;
+   column-count:         3;
+  }
+}
+
+@media (max-width: 800px) {
+  #gallery {
+   -moz-column-count:    2;
+   -webkit-column-count: 2;
+   column-count:         2;
+  }
+}
+
+@media (max-width: 400px) {
+  #gallery {
+   -moz-column-count:    1;
+   -webkit-column-count: 1;
+   column-count:         1;
+  }
+}
+
+
+#gallery img:hover {
+  filter:none;
+}
+.colm{
+  overflow:scroll;
+}
+
+a{
+  text-decoration:none !important ;
 }

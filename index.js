@@ -351,7 +351,7 @@ const listSchema={
 const List = mongoose.model("List",listSchema)
 
 const defaultItems = [item1,item2,item3];
-app.get("/", function(req, res){
+app.get("/student", function(req, res){
   const student_name = req.params.newName;
   Item.find({},function(err,foundItems){
     if(foundItems.length === 9){
@@ -587,6 +587,91 @@ app.get("/", function(req, res){
       }
       else{
         res.render("mayank",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/memorylane",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("memorylane",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/messages_from_juinors",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("messages_from_juinors",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("home",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/login",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("login",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.get("/meet_the_team",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("meet_the_team",{Items: foundItems,prof:prof})
       }
     })
   })
