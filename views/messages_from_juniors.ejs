@@ -185,9 +185,9 @@
 	        </a>
 	      </li>
 	      <li>
-	        <a href="/messages_from_juinors" class="nav-link active" >
+	        <a href="/messages_from_juniors" class="nav-link active" >
 	          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-	          Messages from juinors
+	          Messages from juniors
 	        </a>
 	      </li>
 	      <li>
@@ -220,13 +220,20 @@
 		<main class="main-container">
 			<div class="content-box">
 			</div>
-					
-			<h3>Coming soon!</h3>
-
+			<h3 style="padding-top: 20px;
+			padding-left: 20px;">Messages</h3>
+			<div class="profilecards">
+            
+			<% for(var i=0;i<users.length;i++){ %>
+				<div class ="message-box2">
+				<li class="Message_student"><%=users[i].Message %><em>-<%=users[i].Name%></em></li>
+				</div>
+			<%}%>
+		   </div>
 		</main>
 
 
-
+		</div>
 	</div>
 </div>
 

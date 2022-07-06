@@ -8,6 +8,9 @@ const User = require("./users")
 app.use(bodyParser.urlencoded({extended:true}))
 app.use("/assests",express.static("assests"))
 var database
+const session = require('express-session');
+const passport = require('passport');
+require('./auth');
 app.set("view engine","ejs");
 
 
@@ -360,24 +363,7 @@ const listSchema={
 const List = mongoose.model("List",listSchema)
 
 const defaultItems = [item1,item2,item3];
-app.get("/student", function(req, res){
-  const student_name = req.params.newName;
-  Item.find({},function(err,foundItems){
-    if(foundItems.length === 9){
-      Item.insertMany(defaultItems,function(err){
-        if(err){
-          console.log(err)
-        }else{
-          console.log("Success")
-        }
-      });
-      res.redirect("/")
-    }else{
-      const customListName = "Something";
-      res.render("Students_ID",{Items: foundItems,listName:customListName});
-    }
-  })
-});
+
   
   app.get("/student/:customListName",function(req,res){
     const student_name = req.params.newName;
@@ -616,7 +602,7 @@ app.get("/student", function(req, res){
       }
     })
   })
-  app.get("/messages_from_juinors",function(req,res){
+  app.get("/messages_from_juniors",function(req,res){
     const prof = req.params.prof;
     user.find({},function(err,messages){
       if(messages.length === 9){
@@ -629,7 +615,7 @@ app.get("/student", function(req, res){
         })
       }
       else{
-        res.render("messages_from_juinors",{users:messages,prof:prof})
+        res.render("messages_from_juniors",{users:messages,prof:prof})
       }
     })
   })
@@ -684,9 +670,61 @@ app.get("/student", function(req, res){
       }
     })
   })
-
-let port = process.env.PORT;
-if(port==null||port==""){
-  port = 3800
-}
-app.listen(port);
+  function isLoggedIn(req, res, next) {
+    req.user ? next() : res.sendStatus(401);
+  }
+  
+  app.use(session({ secret: 'cats', resave: false, saveUninitialized: true }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  
+ 
+  
+  app.get('/auth/google',
+    passport.authenticate('google', { scope: [ 'email', 'profile' ] }
+  ));
+  
+  app.get( '/auth/google/callback',
+    passport.authenticate( 'google', {
+      successRedirect: '/student',
+      failureRedirect: '/auth/google/failure'
+    })
+  );
+  
+//   app.get('/protected', isLoggedIn, (req, res) => {
+//     res.send(`Hello ${req.user.displayName}`);
+//   });
+  app.get("/student",isLoggedIn, function(req, res){
+    const student_name = req.params.newName;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Success")
+          }
+        });
+        res.redirect("/")
+      }else{
+        const customListName = "Something";
+        res.render("Students_ID",{Items: foundItems,listName:customListName});
+      }
+    })
+  });
+  app.get('/logout', (req, res) => {
+    req.logout();
+    req.session.destroy();
+    res.send('Goodbye!');
+  });
+  
+  app.get('/auth/google/failure', (req, res) => {
+    res.send('Failed to authenticate..');
+  });
+  
+  app.listen(400, () => console.log('listening on port: 400'));
+// let port = process.env.PORT;
+// if(port==null||port==""){
+//   port = 3800
+// }
+// app.listen(port);

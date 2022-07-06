@@ -184,9 +184,9 @@
 	        </a>
 	      </li>
 	      <li>
-	        <a href="/messages_from_juinors" class="nav-link text-white" >
+	        <a href="/messages_from_juniors" class="nav-link text-white" >
 	          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-	          Messages from juinors
+	          Messages from juniors
 	        </a>
 	      </li>
 	      <li>
@@ -247,7 +247,8 @@
 								<%for(var j = 0;j<Items.length;j++){ %>
 									<%var Sname = Items[j].FEmail%>  
 								    <%if(variable === Sname){ %>
-								    	<li><%=Items[j].Message%>
+										<div class = "message-box">
+								    	<li class="Message_student"><%=Items[j].Message%>
 							            <%var Friend_name = Items[j].Email %>
 								        <%for(var l =0;l<Items.length;l++){  %>
 								    		<% var Real_femail = Items[l].Your_Email_ID %>
@@ -255,6 +256,7 @@
 												<a href=<%=Items[j].Email%>><em>-<%=Items[l].Name%></em></li></a>
 									  		<%}%>
 								 		<%}%>
+											</div>
 								    <%}%>
 								<%}%>
 								<%}%>

@@ -86,7 +86,7 @@ div { position: absolute; }
 #continue_with_google {
 	position:absolute;
 	 top: 3.5vh;
-	left: 6vw; 
+	left: 7vw; 
 	font-size: 3vmin;
 	overflow: hidden;
 	font-family: Gilroy-Bold;
@@ -101,7 +101,7 @@ div { position: absolute; }
 	position: absolute;
 	top: 25vmin;
 	left:7vw;
-	width: 20vw;
+	width: 25vw;
 	height: 4.5vw;
 	
 	-ms-border-radius: 17px;
@@ -126,7 +126,6 @@ div { position: absolute; }
 	background-size:cover;
 } 
 
- 
 @media only screen and (max-width : 1260px){
 #rectangle_5 {
 	width:40vw;
@@ -297,21 +296,21 @@ div { position: absolute; }
 		top:-0.2vw;
 	}
 }
-@media only screen and (max-width : 435px){
+@media only screen and (max-width : 400px){
 
 	#rectangle_6{
-		top:32vw;
-		height: 8vw;
+		top:30vw;
+		height: 6vw;
 		width:50vw;
 	
 	}
 	#continue_with_google{
-		top:-0.2vw;
+		top:0vw;
 	}
 	#image_1{
 		height:14px;
 		width: 14px;
-		top:3px !important;
+		top:5px !important;
 	}
 }
 

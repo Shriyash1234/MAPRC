@@ -59,7 +59,7 @@ div { position: absolute; }
 	color:#3E5118;
 }
 .heading2 {
-
+    margin-top: 80px;
 	padding-left:10vw;
 	overflow: hidden;
 	font-family: Gilroy-Bold;
@@ -181,7 +181,10 @@ div { position: absolute; }
 	left:10vw;
 	width:20vh;
 }
-
+a{ 
+	color: white !important;
+	text-decoration: none !important;
+}
 
 @media only screen and (max-width : 1100px){
 .logo{

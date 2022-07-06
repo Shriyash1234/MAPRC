@@ -233,13 +233,34 @@ img{
 }
 .messages{
   font-family: 'Gilroy', sans-serif !important;
-  background-color: #393E46 !important;
+  background-color: #393E46;
   overflow: auto;
   max-height: 95vh;
   padding-bottom: 8rem;
   border-radius: 10px;
   /* overflow-x: hidden; */
 }
+.message-box{
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
+  background-color:#2B2B28;
+  border-radius: 0px 20px 20px 20px;
+}
+.message-box2{
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
+  background-color:#0F0E0E;
+  border-radius: 0px 20px 20px 20px;
+}
+.Message_student{
+  list-style-type: none;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+
 h3,p,h6,h5{
   font-family: 'Gilroy', sans-serif !important;
   color: white !important;
@@ -286,7 +307,7 @@ img{
 }
 .row2{
   padding-top: 20px;
-}rofile
+}
 
 
 h1{
@@ -485,7 +506,7 @@ text-transform: uppercase;
 
 .card__heading{
 color: var(--text-lighter);
-font-size: 2rem;
+font-size: 1.5rem;
 font-weight: 480;
 text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
 line-height: 1.4;
@@ -609,4 +630,7 @@ line-height: 1.4;
 
 a{
   text-decoration:none !important ;
+}
+.ui-menu-item{
+  color: #1B1717 !important;
 }
