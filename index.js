@@ -675,6 +675,9 @@ app.get("/student", function(req, res){
       }
     })
   })
-app.listen(3800,function(){
-  console.log("Server has started on the port 3800 succesfully.")
-})
+
+let port = process.env.PORT;
+if(port==null||port==""){
+  port = 3800
+}
+app.listen(port);
