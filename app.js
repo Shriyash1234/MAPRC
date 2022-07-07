@@ -738,9 +738,9 @@ const defaultItems = [item1,item2,item3];
       }
     })
   })
-  app.listen(400, () => console.log('listening on port: 500'));
-// let port = process.env.PORT;
-// if(port==null||port==""){
-//   port = 3800
-// }
-// app.listen(port);
+  // app.listen(400, () => console.log('listening on port: 500'));
+let port = process.env.PORT;
+if(port==null||port==""){
+  port = 400
+}
+app.listen(port);
