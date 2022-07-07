@@ -684,6 +684,23 @@ app.get("/student", function(req, res){
       }
     })
   })
+  app.get("/confessions",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("confessions",{Items: foundItems,prof:prof})
+      }
+    })
+  })
 
 let port = process.env.PORT;
 if(port==null||port==""){

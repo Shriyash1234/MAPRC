@@ -375,12 +375,13 @@ overflow-y: scroll;
 height: 100vh;
 }
 
-.profilecards2 {
+/* .profilecards2 {
   padding: 0px;
+  padding-bottom: 2rem;
   margin-top: -70px;
   overflow-y: scroll;
   height: 100vh;
-  }
+  } */
 :root{
 --background-dark: #2d3548;
 --text-light: rgba(255,255,255,0.6);
@@ -633,4 +634,8 @@ a{
 }
 .ui-menu-item{
   color: #1B1717 !important;
+}
+.image_link{
+
+  text-decoration: none;
 }

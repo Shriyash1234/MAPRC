@@ -721,8 +721,24 @@ const defaultItems = [item1,item2,item3];
   app.get('/auth/google/failure', (req, res) => {
     res.send('Failed to authenticate..');
   });
-  
-  app.listen(400, () => console.log('listening on port: 400'));
+  app.get("/confessions",function(req,res){
+    const prof = req.params.prof;
+    Item.find({},function(err,foundItems){
+      if(foundItems.length === 9){
+        Item.insertMany(defaultItems,function(err){
+          if(err){
+            console.log(err)
+          }else{
+            console.log("Successs")
+          }
+        })
+      }
+      else{
+        res.render("confessions",{Items: foundItems,prof:prof})
+      }
+    })
+  })
+  app.listen(400, () => console.log('listening on port: 500'));
 // let port = process.env.PORT;
 // if(port==null||port==""){
 //   port = 3800
