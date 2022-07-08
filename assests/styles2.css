@@ -639,3 +639,7 @@ a{
 
   text-decoration: none;
 }
+.container2{
+  display:block;
+  margin-right: 28px;
+}
