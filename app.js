@@ -12,7 +12,7 @@ const session = require('express-session');
 const passport = require('passport');
 require('./auth');
 app.set("view engine","ejs");
-
+require('https').globalAgent.options.rejectUnauthorized = false;
 
 //  for the search box
 function arrayMax(array) {
@@ -681,8 +681,9 @@ const defaultItems = [item1,item2,item3];
  
   
   app.get('/auth/google',
-    passport.authenticate('google', { scope: [ 'email', 'profile' ] }
-  ));
+  passport.authenticate('google', { successRedirect: '/',scope:
+  ['email']
+}));
   
   app.get( '/auth/google/callback',
     passport.authenticate( 'google', {
@@ -738,7 +739,7 @@ const defaultItems = [item1,item2,item3];
       }
     })
   })
-  // app.listen(400, () => console.log('listening on port: 500'));
+  // app.listen(400, () => console.log('listening on port: 3800'));
 let port = process.env.PORT;
 if(port==null||port==""){
   port = 400
