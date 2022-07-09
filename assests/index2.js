@@ -221,7 +221,7 @@ var name_list = [
 "Srinidhi Pawar "	,
 "Sachin Shukla"	,
 "Sandeep Sharma "	,
-"Vagisha "	,
+"Vagisha18110179 "	,
 "Devvrat Joshi"	,
 "Akangsha Deka"	,
 "Srikanth Palle"	,
