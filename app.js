@@ -11,6 +11,7 @@ var database
 const session = require('express-session');
 const passport = require('passport');
 require('./auth');
+app.locals = require('./views/helper')
 app.set("view engine","ejs");
 require('https').globalAgent.options.rejectUnauthorized = false;
 
@@ -709,7 +710,7 @@ const defaultItems = [item1,item2,item3];
         res.redirect("/")
       }else{
         const customListName = "Something";
-        res.render("Students_ID",{Items: foundItems,listName:customListName});
+        res.render("Students_IDS",{Items: foundItems,listName:customListName});
       }
     })
   });
