@@ -629,7 +629,7 @@ var name_list = [
 "Unnat Dave"	
 ];
 
-mongoose.connect("mongodb+srv://Shriyash:shriyash1a2b@cluster0.1laezrl.mongodb.net/Yearbook5",
+mongoose.connect("mongodb+srv://Shriyash:shriyash1a2b@cluster0.1laezrl.mongodb.net/Yearbook10",
 {
   useNewUrlParser: true,
   useUnifiedTopology:true

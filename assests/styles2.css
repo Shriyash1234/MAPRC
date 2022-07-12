@@ -7,6 +7,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .container::-webkit-scrollbar { 
   display: 50px;  
 }
@@ -254,6 +255,13 @@ img{
   background-color:#0F0E0E;
   border-radius: 0px 20px 20px 20px;
 }
+.message-box3{
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
+  background-color:#323232;
+  border-radius: 0px 20px 20px 20px;
+}
 .Message_student{
   list-style-type: none;
   padding-top: 10px;
@@ -373,6 +381,7 @@ padding: 0px;
 margin-top: 2em;
 overflow-y: scroll;
 height: 100vh;
+padding-bottom: 100px;
 }
 
 /* .profilecards2 {

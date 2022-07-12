@@ -251,8 +251,8 @@
 							<%  for(var k = 0;k<Items.length;k++){ %>
 								<%  var Real_name = Items[k].Your_Email_ID %>  
 								<%    if(variable === Real_name){ %>
-								<%	  var profile_picture = Items[k].Profile_Pic%>
-							    		<img class ="img2" src= <%= profile_picture %>  alt="">     
+								
+							    		<img class ="img2" src= '../assests/Profile_images/<%=funct(Items[k].Profile_Pic)%>'  alt="">     
 									  <h3 class="Person_name"><%=Items[k].Name%></h3>
 									  <div class="container2">
 									  <h6 class="Person_bio"><%=Items[k].Profile_Biography%></h6>

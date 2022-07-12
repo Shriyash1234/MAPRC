@@ -251,11 +251,11 @@
 			<div class="profilecards" style="padding-bottom: 200px;">
 			<% for(var i=0;i<users.length;i++){ %>
 				<%if(users[i].Photo === null){%>
-				<div class ="message-box2">
+				<div class ="message-box3">
 				<li class="Message_student"><%=users[i].Message %><em>-<%=users[i].Name%></em></li>
 				</div>
 		    <%}else{%>
-				<div class ="message-box2">
+				<div class ="message-box3">
 				<li class="Message_student"><%=users[i].Message %><em>-<%=users[i].Name%></em><a class="image_link" href="<%=users[i].Photo%>">    ~Image</a></li>
 				</div>
 			<%}%>
