@@ -38,7 +38,7 @@
 'https://drive.google.com/uc?id=15t8_ChIg3gc-xSa7J6SqVAZv0luFZGMN': 'IMG20220307183100 - Akangsha Deka 20250035.jpg',
 'https://drive.google.com/uc?id=16-KuWoZIM-FrtRPIdwpVZItbMguM9T5n': 'IMG_20220413_224125 - M MANIDHAR 18110096.jpg',
 'https://drive.google.com/uc?id=166LzzzrJCE7C7cv1RgLzgjYVVxIdJcj1': 'WhatsApp Image 2022-03-29 at 8.13.54 PM - Pabitra Mandal.jpg',
-'https://drive.google.com/uc?id=16GVzYmbnBzByROC3ELbXHw3hr6fcq9Zg': '1650466794662 - KISHAN SINGH 18110085.JPG',
+'https://drive.google.com/uc?id=16GVzYmbnBzByROC3ELbXHw3hr6fcq9Zg': '1650466794662 - KISHAN SINGH 18110085.jpg',
 'https://drive.google.com/uc?id=16JFUqhta7suRKjNa2Nx6wTY1g3rTSBfp': '20220413_194924 - Aakash IITGN.jpg',
 'https://drive.google.com/uc?id=16VlrG0EOKTlcf4g9X6KQ1lr7W6LNYSKE': 'IMG_20211209_151005 - KATIKE PRANAY DEEP REDDY 18110083.jpg',
 'https://drive.google.com/uc?id=16YjSaGAuVslooz8bcjEoNsuAOLxJx-Xz': 'IMG_3428__01 - Amay Gupta 20250040.jpg',
