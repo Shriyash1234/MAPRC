@@ -449,6 +449,9 @@ grid-template-columns: repeat(2, 1fr);
 .card-grid{
 grid-template-columns: repeat(4, 1fr); 
 }
+.card2{
+  left:140px;
+}
 }
 
 @media(min-width: 540px){
@@ -459,8 +462,9 @@ grid-template-columns: repeat(4, 1fr);
   
   @media(min-width: 960px){
   .card-grid2{
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(3, 1fr); 
   }
+  
   }
 
 .card{
