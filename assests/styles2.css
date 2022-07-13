@@ -286,6 +286,7 @@ h3,p,h6,h5{
   padding-top: 15px;
 }
 .navbar-light{
+  padding-top: 0 !important;
   padding-left:0 !important;
   padding-right:0 !important;
   padding-bottom:0 !important;
@@ -652,6 +653,12 @@ a{
   display:block;
   margin-right: 28px;
   margin-left: 10px;
+  height:420px;
+  overflow-x:hidden;
+  overflow-y: scroll;
+}
+.Person_bio{
+  height: 460px;
 }
 .Person_name{
   margin-left: 10px;
