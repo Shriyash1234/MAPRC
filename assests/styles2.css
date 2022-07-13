@@ -703,3 +703,7 @@ a{
   padding-top: 6px !important;
   padding-bottom: 6px !important ;
 }
+.btn-info{
+  background-color: #1172ef !important;
+  border-color: #1172ef !important;
+}
