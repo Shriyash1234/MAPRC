@@ -699,6 +699,7 @@ a{
   src: local('Gilroy-Regular'), url('https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff') format('woff');
 }
 .nav-link{
+  padding-left: 14px !important;
   padding-top: 6px !important;
   padding-bottom: 6px !important ;
 }
