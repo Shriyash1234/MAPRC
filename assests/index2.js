@@ -1,3 +1,7 @@
+$(document).ready( function() {
+  $("#loadOverlay").css("display","none");
+});
+
 $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
       $('.column2').toggleClass('col-9');
@@ -367,7 +371,31 @@ var name_list = [
 "Deepesh Pankaj"	,
 "Arpita Kabra"	,
 "Hitesh Joya"	,
-"Unnat Dave"	
+"Unnat Dave",
+"Ritika Pahwa"	,
+"Vinod kumar"	,
+"Rachit Chhaya"	,
+"Madhumita Mahali"	,
+"Sunil Kumar Turpati"	,
+"Simran"	,
+"Mohit Kumar"	,
+"Souritra Garai"	,
+"Mrityunjay saraf"	,
+"Yogesh Dhawan"	,
+"Sagar Bisen"	,
+"Abishek Sarkar"	,
+"Shraddha Matkar"	,
+"Abhishek K. Pandey"	,
+"Ausula Prashanth"	,
+"Sudama Kumar Mahto"	,
+"Anjali Singh"	,
+"Ankita Rameshkumar Shah"	,
+"Anu kumari"	,
+"Devangshu Nandi"	,
+"Remya PK"	,
+"Dewanshi"	,
+"Shivam Sahu"	,
+"Anusheel Kaula"
 ];
 var list_mail = [
   "akanksham@iitgn.ac.in"	,
@@ -688,6 +716,30 @@ var list_mail = [
 "arpita.kabra@iitgn.ac.in"	,
 "hitesh.joya@iitgn.ac.in"	,
 "unnat.dave@iitgn.ac.in"	,
+"ritikap@iitgn.ac.in"	,
+"vinod.ku@iitgn.ac.in"	,
+"rachit.chhaya@iitgn.ac.in"	,
+"madhumitam@iitgn.ac.in"	,
+"sunilkt@iitgn.ac.in"	,
+"simrant@iitgn.ac.in"	,
+"mohitk@iitgn.ac.in"	,
+"souritra.garai@iitgn.ac.in"	,
+"mrityunjay.saraf@iitgn.ac.in"	,
+"yogesh.dhawan@iitgn.ac.in"	,
+"sagar.bisen@iitgn.ac.in"	,
+"abisheks@iitgn.ac.in"	,
+"shraddham@iitgn.ac.in"	,
+"abhishek.pandey@iitgn.ac.in"	,
+"ausula.prashanth@iitgn.ac.in"	,
+"sudamam@iitgn.ac.in"	,
+"anjalis@iitgn.ac.in"	,
+"ankita.shah@iitgn.ac.in"	,
+"anuk@iitgn.ac.in"	,
+"devangshun@iitgn.ac.in"	,
+"remyapk@iitgn.ac.in"	,
+"dewanshid@iitgn.ac.in"	,
+"sahu_shivam@iitgn.ac.in"	,
+"anusheel.kaula@iitgn.ac.in"
 ]
 $("#searchbox").autocomplete({source:name_list},{minLength:3,select: function(event, ui) {
   var item = ui.item;

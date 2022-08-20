@@ -262,6 +262,20 @@ img{
   background-color:#323232;
   border-radius: 0px 20px 20px 20px;
 }
+.message-box4{
+  margin-top: 25px;
+  margin-right: 500px;
+  margin-left: 25px;
+  background-color:#323232;
+  border-radius: 0px 0px 20px 20px;
+}
+.message-box5{
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-left: 500px;
+  background-color:#323232;
+  border-radius: 0px 0px 20px 20px;
+}
 .Message_student{
   list-style-type: none;
   padding-top: 10px;
@@ -313,6 +327,9 @@ img{
 .image2{
   position: relative;
   left:40px;
+}
+.image3{
+  border-radius: 0px !important;
 }
 .row2{
   padding-top: 20px;
@@ -439,13 +456,13 @@ max-width: var(--width-container);
 width: 100%;
 }
 
-@media(min-width: 540px){
+@media only screen and (min-width: 540px){
 .card-grid{
 grid-template-columns: repeat(2, 1fr); 
 }
 }
 
-@media(min-width: 960px){
+@media only screen and (min-width: 960px){
 .card-grid{
 grid-template-columns: repeat(4, 1fr); 
 }

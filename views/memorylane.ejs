@@ -244,21 +244,19 @@
 		<main class="main-container">
 			<div class="content-box">
 			</div>
-	<!-- <div class="column2 colm col-9">
-		
-        <div class="profilecards2"> -->
+          <div class="profilecards">
 
-                <!-- <div id="gallery">
-                    <%    for(var m = 0;m<Items.length;m++){    %>
-                    <%    let image = Items[m].Photo;         %>
+                <div id="gallery">
+                    <%    for(var m = 0;m<photo.length;m++){    %>
+                    <%    let image = photo[m].Group_photo;         %>
                     
-                          <img src= "<%=String(image).replace('open','uc')%>"  alt=""></img>
+                          <img src= <%=image%>  style="border:0px;" class="image3" alt=""></img>
                     <%}%>    
                     
 
-                </div> -->
-				<h3 style="padding-top:30px; padding-left: 50px;">Coming soon!</h3>
-			        </div>
+                </div>
+			</div>
+	
 			</div>
 			</div>
 		</main>
