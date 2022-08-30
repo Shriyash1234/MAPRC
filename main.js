@@ -16,7 +16,7 @@ app.set("view engine","ejs");
 require('https').globalAgent.options.rejectUnauthorized = false;
 // const items = require('./new_response.json');
 const users = require('./juinor_response.json');
-const items = require('./responses3.json')
+const items = require('./responses.json')
 const confession = require('./Confessions.json')
 const photo = require('./memorylane2.json')
 
