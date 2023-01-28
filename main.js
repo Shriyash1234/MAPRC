@@ -684,9 +684,8 @@ var name_list = [
 ];
 
   app.get("/student/:customListName",function(req,res){
-    const student_name = req.params.newName;
     const customListName = req.params.customListName;
-    res.render("list2",{Items: items,listName:customListName,student_name:student_name})  
+    res.render("list2",{Items: items,listName:customListName})  
   })
 
   app.post("/",function(req,res){
@@ -765,7 +764,7 @@ var name_list = [
       }
     )
   app.get("/",function(req,res){
-        res.render("home")
+        res.render("home2")
       }
     )
   app.get("/login",function(req,res){
@@ -821,6 +820,6 @@ var name_list = [
   // app.listen(400, () => console.log('listening on port: 3800'));
 let port = process.env.PORT;
 if(port==null||port==""){
-  port = 400
+  port = 700
 }
 app.listen(port);
